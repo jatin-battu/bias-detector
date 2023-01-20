@@ -58,12 +58,12 @@ ethpredict.addEventListener("click", async () => {
        
 
         const predictionsArray = tf.unstack(predictions);
-        console.log(predictionsArray[0].dataSync())
-        console.log(predictionsArray[1].dataSync())
-        console.log(predictionsArray[2].dataSync())
+        //console.log(predictionsArray[0].dataSync())
+        //console.log(predictionsArray[1].dataSync())
+        //console.log(predictionsArray[2].dataSync())
         const predictionsMax = predictionsArray.map(tensor => tf.argMax(tensor, -1))
         const regularArrayPromise = await Promise.all(predictionsMax.map(tensor => tensor.data()));
-        console.log(regularArrayPromise)
+        //console.log(regularArrayPromise)
         
 
         for(let i=0; i<regularArrayPromise.length; i++){
@@ -101,12 +101,12 @@ genpredict.addEventListener("click", async () => {
        
 
         const predictionsArray = tf.unstack(predictions);
-        console.log(predictionsArray[0].dataSync())
-        console.log(predictionsArray[1].dataSync())
-        console.log(predictionsArray[2].dataSync())
+        //console.log(predictionsArray[0].dataSync())
+        //console.log(predictionsArray[1].dataSync())
+        //console.log(predictionsArray[2].dataSync())
         const predictionsMax = predictionsArray.map(tensor => tf.argMax(tensor, -1))
         const regularArrayPromise = await Promise.all(predictionsMax.map(tensor => tensor.data()));
-        console.log(regularArrayPromise)
+        //console.log(regularArrayPromise)
         
 
         for(let i=0; i<regularArrayPromise.length; i++){
@@ -138,12 +138,12 @@ agepredict.addEventListener("click", async () => {
        
 
         const predictionsArray = tf.unstack(predictions);
-        console.log(predictionsArray[0].dataSync())
-        console.log(predictionsArray[1].dataSync())
-        console.log(predictionsArray[2].dataSync())
+        //console.log(predictionsArray[0].dataSync())
+        //console.log(predictionsArray[1].dataSync())
+        //console.log(predictionsArray[2].dataSync())
         const predictionsMax = predictionsArray.map(tensor => tf.argMax(tensor, -1))
         const regularArrayPromise = await Promise.all(predictionsMax.map(tensor => tensor.data()));
-        console.log(regularArrayPromise)
+        //console.log(regularArrayPromise)
         
 
         for(let i=0; i<regularArrayPromise.length; i++){
